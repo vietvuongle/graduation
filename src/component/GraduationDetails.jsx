@@ -49,7 +49,6 @@ const GraduationDetails = () => {
                         <div className="absolute bottom-0 left-0 w-full p-1 text-xs text-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">2025</div>
                     </div>
                     <div className="ml-4 flex-1">
-                        <h2 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">Tui</h2>
                         <p className="text-blue-200 flex items-center">
                             <StarIcon size={14} className="mr-1 text-yellow-400" /> Cử nhân khoa CNTT
                         </p>
@@ -65,6 +64,17 @@ const GraduationDetails = () => {
             </div>
             {/* Event Details */}
             <div className="flex-1 px-4 md:px-0 md:max-w-2xl mx-auto w-full mt-6 space-y-4">
+                <div className={`bg-blue-700/30 rounded-xl p-5 border border-blue-600/30 hover:border-blue-500/50 transition-all duration-700 hover:shadow-lg hover:shadow-blue-700/20 transform ${activeSection >= 2 ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
+                    <h3 className="flex items-center text-lg font-bold mb-2">
+                        <span className="bg-gradient-to-br from-blue-600 to-blue-700 p-2 rounded-lg mr-3 inline-flex shadow-inner">
+                            <UsersIcon size={18} className="text-blue-100" />
+                        </span>
+                        Người ra chuồng
+                    </h3>
+                    <div className="text-blue-100 ml-12 space-y-1">
+                        <p className="text-blue-300">Lê Viết Vương</p>
+                    </div>
+                </div>
                 <div className={`bg-blue-700/30 rounded-xl p-5 border border-blue-600/30 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-700/20 transform ${activeSection >= 0 ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
                     <h3 className="flex items-center text-lg font-bold mb-2">
                         <span className="bg-gradient-to-br from-blue-600 to-blue-700 p-2 rounded-lg mr-3 inline-flex shadow-inner">
@@ -73,7 +83,7 @@ const GraduationDetails = () => {
                         Thời Gian
                     </h3>
                     <div className="text-blue-100 ml-12 space-y-1">
-                        <p className="text-blue-300">7:00 Sáng, Thứ Bảy, 05/07/2025</p>
+                        <p className="text-blue-300">7:00 - 11:00, Thứ Bảy, 05/07/2025</p>
                     </div>
                 </div>
                 <div className={`bg-blue-700/30 rounded-xl p-5 border border-blue-600/30 hover:border-blue-500/50 transition-all duration-500 hover:shadow-lg hover:shadow-blue-700/20 transform ${activeSection >= 1 ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
@@ -87,22 +97,11 @@ const GraduationDetails = () => {
                         <p className="text-blue-300">Hội trường số 1, Điện Biên Phủ, Thành phố Huế</p>
                     </div>
                 </div>
-                <div className={`bg-blue-700/30 rounded-xl p-5 border border-blue-600/30 hover:border-blue-500/50 transition-all duration-700 hover:shadow-lg hover:shadow-blue-700/20 transform ${activeSection >= 2 ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}>
-                    <h3 className="flex items-center text-lg font-bold mb-2">
-                        <span className="bg-gradient-to-br from-blue-600 to-blue-700 p-2 rounded-lg mr-3 inline-flex shadow-inner">
-                            <UsersIcon size={18} className="text-blue-100" />
-                        </span>
-                        Người ra chuồng
-                    </h3>
-                    <div className="text-blue-100 ml-12 space-y-1">
-                        <p className="text-blue-300">Lê Viết Vương</p>
-                    </div>
-                </div>
             </div>
             {/* Footer Quote */}
             <div className={`text-center p-6 bg-blue-900/50 mt-8 border-t border-blue-700/50 backdrop-blur-sm transition-all duration-700 delay-1000 transform ${isLoaded ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}>
                 <p className="text-sm text-blue-300 mb-2 italic">"Sự hiện diện của các bạn là niềm vinh hạnh lớn của tôi."</p>
-                <p className="text-pink-400 font-medium">Hẹn gặp lại các bạn vào ngày hôm đó nhé! (Lo mà tới)</p>
+                <p className="text-pink-400 font-medium">Hẹn gặp lại các bạn vào ngày hôm đó nhé!</p>
             </div>
         </div>
     );
